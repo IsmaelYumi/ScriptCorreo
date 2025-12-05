@@ -31,7 +31,6 @@ df.columns = df.columns.astype(str).str.strip()
 def llenar_pdf(template_pdf, output_pdf, fila):
     pdf = fitz.open(template_pdf)
     page = pdf[0]
-
     # EJEMPLO DE CAMPOS — AJUSTA LAS COORDENADAS
     page.insert_text((50, 80),  f"{fila['NOMBRE']}")
     page.insert_text((50, 110), f"{fila['CEDULA']}")
